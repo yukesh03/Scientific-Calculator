@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Scientific Calculator</title>
+	<link rel="website icon" type="png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70447982-5"></script>
+
+  	<!-- Common Tags -->
+      <meta content='#52250407' name='theme-color' />
+
+</head>
+<body>
+	
+    <div class="container">
+		<h1><a style="text-decoration: none; color: #f4f805; margin-left: 0.25rem;" href="" onclick="location.reload();">SCIENTIFIC CALCULATOR</a></h1 >
+		<div class="calculator">
+
+	<form name = "calc" >
+		
+			<tr>
+			<td colspan=5>
+				<input id="answer"
+					name="display"
+					onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+					type="text" >
+			</td>
+            </tr>
+        <table>
+			
+
+			<tr>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='1'">1</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='2'">2</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='3'">3</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" style="background-color: #8e0da8; font-weight:bold; color:#f4f805"
+					OnClick="calc.display.value=''">C</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="backspace(this.form)"><-</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" style="background-color: #25db95; font-weight:bold; color:#eff1ec"
+					OnClick="calculate(this.form)">=</button>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='4'">4</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='5'">5</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='6'">6</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='-'">-</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='%'">%</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value='Math.cos('">Cos</button>
+			</td>
+			</tr>
+
+			<tr>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='7'">7</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='8'">8</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='9'">9</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='*'">*</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='!'">n!</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value='Math.sin('">Sin</button>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<button input id="btn" type="button" style="font-weight: bold;"
+					OnClick="calc.display.value+='.'">.</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='0'">0</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" style="font-weight: bold;"
+					OnClick="calc.display.value+=','">,</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='+'">+</button>
+			</td>
+			<td>
+				<button input id="btn" type="button"
+					OnClick="calc.display.value+='/'">/</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value='Math.tan('">Tan</button>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.E'">e</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.PI'">π</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.pow('">^</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='('">(</button>
+			</td>
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+=')'">)</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value='Math.log('">Log</button>
+			</td>
+			</tr>
+
+			<tr>
+			<td>
+				<button input id="btn" type="button"
+					OnClick="calc.display.value+='Math.sqrt('">sqrt</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.LN2'">ln2</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.Log10'">ln10</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.LOG2E'">l2e</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value+='Math.log10'">l10e</button>
+			</td>
+
+			<td>
+				<button input id="btn" type="button" 
+					OnClick="calc.display.value='Math.exp('">exp</button>
+			</td>
+			</tr>
+		</table>
+	</form>
+    <hr style="max-width: 50vw;">
+			<div style="font-size:1rem; display: flex; align-items: center; justify-content: center;">Made with <img style="margin: 0.15rem;" src="heart.png">by<a style="text-decoration: none; color: #f1c40f; margin-left: 0.25rem;"
+                target="_blank" href="https://www.instagram.com/classic__kiddooo__/">Yukesh</a></div>
+		</div>
+	</div>
+    <div id="turn">
+    PLEASE TURN YOUR DEVICE
+	</div>
+</body>
+
+</html>								
