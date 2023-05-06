@@ -1,4 +1,4 @@
-# Scientific-Calculator
+# [Scientific-Calculator](https://yukesh03.github.io/Scientific-Calculator/)
 its a simple scientific calculator made by Html , Css , JavaScript
 
 Operations: This scientific calculator can perform the following operations which are listed below: 
